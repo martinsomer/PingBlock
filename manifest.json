@@ -1,0 +1,26 @@
+{
+    "name": "PingBlock - Block Click Tracking",
+    "author": "Martin S",
+    "version": "1.0",
+    "description": "Open-source Chrome extension to block click tracking.",
+    "manifest_version": 2,
+    
+    "icons": {
+        "128": "icons/icon_128.png"
+     },
+    
+    "browser_action": {
+        "default_title": "PingBlock",
+        "default_icon": "icons/icon_64.png"
+    },
+    
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["js/content.js"]
+    }],
+    
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    }
+}
